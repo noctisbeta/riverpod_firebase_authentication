@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:functional/functional.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_firebase_authentication/src/log_profile.dart';
 
 /// A [StateNotifier] that manages the authentication state of the current user.

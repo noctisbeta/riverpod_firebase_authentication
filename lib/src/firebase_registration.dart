@@ -3,17 +3,17 @@ import 'package:functional/functional.dart';
 import 'package:logger/logger.dart';
 import 'package:riverpod/riverpod.dart';
 
-/// Firebase authentication controller.
-class RegistrationController {
+/// Firebase auth functions related to registration.
+class FirebaseRegistration {
   /// Default constructor.
-  RegistrationController(this._auth);
+  FirebaseRegistration(this._auth);
 
   /// Firebase auth instance.
   final FirebaseAuth _auth;
 
   /// Provides the controller.
   static final provider = Provider(
-    (ref) => RegistrationController(FirebaseAuth.instance),
+    (ref) => FirebaseRegistration(FirebaseAuth.instance),
   );
 
   /// Creates a user with [email] and [password].

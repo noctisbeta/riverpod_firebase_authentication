@@ -16,9 +16,7 @@ class GoogleSignInController implements GoogleSignInProtocol {
 
   /// Provides the controller.
   static final provider = Provider.autoDispose<GoogleSignInController>(
-    (ref) => GoogleSignInController(
-      FirebaseAuth.instance,
-    ),
+    (ref) => GoogleSignInController(FirebaseAuth.instance),
   );
 
   @override
@@ -31,9 +29,7 @@ class GoogleSignInController implements GoogleSignInProtocol {
                   const GoogleSignInException('Error signing in with Google.'),
             ),
           )
-          .bindEither(
-            _getCredential,
-          );
+          .bindEither(_getCredential);
 
   AsyncResult<GoogleSignInException, UserCredential> _getCredential(
     GoogleSignInAccount acc,

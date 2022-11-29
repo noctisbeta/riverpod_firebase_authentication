@@ -38,9 +38,7 @@ class AuthStore extends StateNotifier<Option<User>> {
   /// Provides the [AuthStore].
   static final provider =
       StateNotifierProvider.autoDispose<AuthStore, Option<User>>(
-    (ref) => AuthStore(
-      FirebaseAuth.instance,
-    ),
+    (ref) => AuthStore(FirebaseAuth.instance),
   );
 
   /// True if the current state holds a user, false otherwise.

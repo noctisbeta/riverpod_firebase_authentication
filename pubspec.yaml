@@ -2,6 +2,7 @@ name: riverpod_firebase_authentication
 description: A new Flutter package project.
 version: 0.0.1
 homepage: 'todo'
+publish_to: none
 
 environment:
   sdk: '>=2.18.5 <3.0.0'

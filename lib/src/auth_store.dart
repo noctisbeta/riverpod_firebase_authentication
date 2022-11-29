@@ -13,13 +13,13 @@ class AuthStore extends StateNotifier<Option<User>> {
     this._auth,
   ) : super(const None()) {
     _subscription = _auth.authStateChanges().listen(
-          (user) => tap(
-            tapped: Option.of(user).match(
+          (user) => effect(() {
+            Option.of(user).match(
               none: () => state = const None(),
               some: (user) => state = Some(user),
-            ),
-            effect: () => myLog.d('Auth state changed: $user'),
-          ),
+            );
+            myLog.d('Auth state changed: $user');
+          }),
         );
   }
 

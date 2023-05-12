@@ -1,12 +1,11 @@
 name: riverpod_firebase_authentication
 description: A new Flutter package project.
 version: 0.0.1
-homepage: 'todo'
+homepage: "todo"
 publish_to: none
 
 environment:
-  sdk: '>=2.18.5 <3.0.0'
-  flutter: ">=1.17.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   firebase_auth: ^4.1.4
@@ -29,7 +28,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter: null
-
 # To add assets to your package, add an assets section, like this:
 # assets:
 #   - images/a_dot_burr.jpeg
